@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## きのこのさいと
 
 You can use the [editor on GitHub](https://github.com/kinoko2k/kinoko2k.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
