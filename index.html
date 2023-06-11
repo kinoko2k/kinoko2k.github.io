@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .wrapper {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .money {
+      position: absolute;
+      font-size: 48px;
+      animation: rotate 5s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .message {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="money">&#128181;</div>
+    <div class="message">100万くれ</div>
+  </div>
+
+  <script>
+    window.onload = function() {
+      var money = document.querySelector('.money');
+      var wrapper = document.querySelector('.wrapper');
+      var wrapperRect = wrapper.getBoundingClientRect();
+      var moneyRect = money.getBoundingClientRect();
+      var maxTop = wrapperRect.height - moneyRect.height;
+      var maxLeft = wrapperRect.width - moneyRect.width;
+
+      var randomTop = Math.floor(Math.random() * maxTop);
+      var randomLeft = Math.floor(Math.random() * maxLeft);
+
+      money.style.top = randomTop + 'px';
+      money.style.left = randomLeft + 'px';
+    }
+  </script>
+</body>
+</html>
