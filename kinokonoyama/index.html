@@ -232,6 +232,27 @@
       bottom: 0;
       width: 100%;
     }
+
+    /* query */
+    @media screen and (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        /* 1列に変更 */
+        gap: 10px;
+        /* グリッドアイテム間の隙間を縮小 */
+        min-height: auto;
+        /* 高さを自動調整 */
+      }
+
+      .member-card {
+        margin-bottom: 20px;
+        /* カードの間にマージンを追加 */
+      }
+
+      .img_left {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
