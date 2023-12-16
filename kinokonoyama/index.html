@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,75 @@
       font-family: Arial, sans-serif;
     }
 
-    .container {
-      background: linear-gradient(to bottom right, #87CEEB, #00BFFF); /* 水色のグラデーション */
+    .syokai {
+      background: lightgreen;
       display: flex;
-      justify-content: space-around;
+      justify-content: left;
       align-items: center;
-      min-height: 100vh;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影の追加 */
+      min-height: 30vh;
+
+    }
+
+    .container {
+      background: linear-gradient(to bottom right, #87CEEB, #FF69B4);
+      /* 水色からピンクへのグラデーション */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* 3列のグリッド */
+      gap: 20px;
+      /* グリッドアイテム間の隙間 */
+      justify-content: center;
+      align-items: center;
+      min-height: 200vh;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* 影の追加 */
+      padding: 20px;
+      /* コンテナ全体に隙間を追加 */
+      justify-content: space-between;
+    }
+
+    .container2 {
+      background-color: rgba(22, 185, 43, 0.726);
+      /* 水色のグラデーション */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 10vh;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* 影の追加 */
     }
 
     .member-card {
       background: white;
-      padding: 20px;
+      padding: 30px;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      max-width: 300px;
+      transition: box-shadow 0.3s ease-in-out;
+      /* ホバー時のトランジション */
       text-align: center;
-      margin: 20px;
+      display: flex;
+      /*flex-direction: ;  子要素を縦に配置 */
+      align-items: center;
+      /* 子要素を中央に配置 */
+    }
+
+    .member-card img {
+      max-width: 100%;
+      /* 画像の幅が親要素を超えないように制約を追加 */
+      height: auto;
+      /* アスペクト比を保持したまま、高さを自動調整 */
+      margin-bottom: 10px;
+      /* 画像と説明の間にマージンを追加 */
+      margin-right: 10vh;
+    }
+
+
+    .img_left {
+      text-align: left;
+    }
+
+    .member-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      /* ホバー時の影の追加 */
     }
 
     h2 {
@@ -36,30 +89,256 @@
     p {
       color: #555;
     }
+
+    .title {
+      margin: ;
+
+    }
+
+    .box6 {
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      background: #f0f7ff;
+      border: dashed 2px #5b8bd0;
+      /*点線*/
+      margin-top: -h;
+      /*margin-right: 180vh;*/
+      padding-top: 0vh;
+      margin-left: 5vh;
+    }
+
+    .box6 h2 {
+      font-size: 30px;
+
+    }
+
+    .box6 p {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    .picbox {
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      /*点線*/
+      margin-top: -h;
+      /*margin-right: 180vh;*/
+      padding-top: 0vh;
+      margin-left: 5vh;
+    }
+
+    .picbox img {
+      margin: 3vh;
+    }
+
+    .rainbow-text {
+      background: linear-gradient(to right, #ec4e4e, #ff7f00, #dada27, #3fe03f, #2525ff, #4b0082, #8f00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bold2 {
+      color: black;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .guildtwitter {
+      color: #1DACF2;
+      text-decoration: underline;
+    }
+
+    .guilddiscord {
+      color: #7289da;
+      text-decoration: underline;
+    }
+
+    .bosyu {
+      background: linear-gradient(to right, #0000ff, #3fe03f, #1DACF2, #ce4c4c);
+      color: yellow;
+    }
+
+    .center {
+      margin-bottom: auto;
+      display: flex;
+    }
+
+    .fontsize20 {
+      font-size: 25px;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .membertitle {
+      font-size: 40px;
+      margin: 2vh;
+    }
+
+    .margin p {
+      margin: 5vh;
+    }
+
+    /* rank_color */
+    .mvp_plus {
+      color: #3CE6E6;
+    }
+
+    .mvp {
+      color: #3CE6E6;
+    }
+
+    .vip_plus {
+      color: #3CE63C;
+    }
+
+    .vip {
+      color: #3CE63C;
+    }
+
+    /* 自己紹介 */
+    .bunsyo {
+      text-align: left;
+    }
+
+    .github a {
+      color: #555;
+    }
+
+    /* 新しく追加されたフッターのスタイル */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position:static;
+      bottom: 0;
+      width: 100%;
+    }
   </style>
 </head>
+
 <body>
-    <div class="intro">
-        <div class="syokai">
-            <h2></h2>
-        </div>
-    </div>
-  <div class="container">
-    <div class="member-card">
-      <h2>メンバー1</h2>
-      <p>役職: ポジション1</p>
-    </div>
-
-    <div class="member-card">
-      <h2>メンバー2</h2>
-      <p>役職: ポジション2</p>
+  <div class="syokai">
+    <div class="box6">
+      <h2 class="rainbow-text center">Kinokonoyama ～ きのこのやま ～ Hypixel Guild</h2>
+      <br>
+      <p>目標は、<a class="bold2">下手でも上手でも楽しくMinecraftPvPを楽しむこと<a></a></p>
+      <br>
+      <p>参加は、<a class="guilddiscord">Discordの参加</a>または、<a class="guildtwitter"
+          href="https://twitter.com/kinoko1216">ギルド管理者のTwitter</a>まで</p>
+      <br>
+      <p><a class="bosyu bold2 fontsize20">参加者募集中！</a> <a class="bold2">初心者でも上級者でも大丈夫</a>です！ ほとんど初心者しかいません！</p>
+      <br>
+      <p class="right">クリップ集→</p>
     </div>
 
-    <div class="member-card">
-      <h2>メンバー3</h2>
-      <p>役職: ポジション3</p>
+    <div class="picbox">
+      <img src="img/hage_fall.gif" alt="hage_fall" width="600" height="300"></img> <img src="img/fb_hage.gif"
+        alt="fb_hage" width="600" height="300"></img>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="title">
+      <h2 class="bold2 membertitle">
+        <メンバーリスト>
+      </h2>
     </div>
   </div>
 
+  <div class="container">
+    <div class="member-card">
+      <img class="img_left" src="https://mineskin.eu/armor/body/Kinoko_2K/100.png"></img>
+      <div class="bunsyo">
+        <h2 class="mvp_plus"><a class="mvp_plus" href="https://plancke.io/hypixel/player/stats/Kinoko_2K">Kinoko_2K - GuildOwner</a></h2>
+        <p>和気藹々と楽しむPvPプレイヤーなだけ。</p>
+        <p>KinokoNetWorkからの派生Guild</p>
+        <p><a href="https://kioko.ddns.net">Site</a> / <a class="guildtwitter"
+            href="https://twitter.com/kinoko1216">Twitter</a> / <a class="guilddiscord"
+            href="https://discord.gg/Qs6q3mhz2S">Discord</a> / <a class="github"
+            href="https://github.com/kinoko2k/">GitHub</a></p>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img class="img_left" src="https://mineskin.eu/armor/body/Hgno/100.png"></img>
+      <div class="bunsyo">
+        <h2 class="vip"><a class="vip" href="https://plancke.io/hypixel/player/stats/Hgno">Hgno - GuildSubOwner</a></h2>
+        <p>GuildSubOwner</p>
+      </div>
+    </div>
+
+
+    <div class="member-card">
+      <img src="https://mineskin.eu/armor/body/frosiky/100.png"></img>
+      <div class="bunsyo">
+        <h2><a href="https://plancke.io/hypixel/player/stats/frosiky">frosiky - GuildSubOwner</a></h2>
+        <p>役職: ポジション3</p>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="https://mineskin.eu/armor/body/TomiK5303/100.png"></img>
+      <div class="bunsyo">
+        <h2><a href="https://plancke.io/hypixel/player/stats/TomiK5303">TomiK5303</a></h2>
+        <p>役職: ポジション3</p>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="https://mineskin.eu/armor/body/tonkotu10/100.png"></img>
+      <div class="bunsyo">
+        <h2><a href="https://plancke.io/hypixel/player/stats/tonkotu10">tonkotu10</a></h2>
+        <p>役職: ポジション3</p>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="https://mineskin.eu/armor/body/kuuhaku_TY/100.png"></img>
+      <div class="bunsyo">
+        <h2><a href="https://plancke.io/hypixel/player/stats/hakuchan_thx">hakuchan_thx</a></h2>
+        <p>役職: ポジション3</p>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="https://mineskin.eu/armor/body/kai0919/100.png"></img>
+      <div class="bunsyo">
+        <h2 class="vip"><a class="vip" href="https://plancke.io/hypixel/player/stats/kai0919">kai0919</a></h2>
+        <p>役職: ポジション3</p>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="https://mineskin.eu/armor/body/Sylphid_Modder/100.png"></img>
+      <div class="bunsyo">
+        <h2><a href="https://plancke.io/hypixel/player/stats/Sylphid_Modder">Sylphid_Modder</a></h2>
+        <p>役職: ポジション3</p>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="https://mineskin.eu/armor/body/marubon918/100.png"></img>
+      <div class="bunsyo">
+        <h2><a href="https://plancke.io/hypixel/player/stats/marubon918_JE">marubon918_JE</a></h2>
+        <p>役職: ポジション3</p>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="https://mineskin.eu/armor/body/tenju831kirai/100.png"></img>
+      <div class="bunsyo">
+        <h2><a href="https://plancke.io/hypixel/player/stats/tenju831kirai">tenju831kirai</a></h2>
+        <p>役職: ポジション3</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Kinokonoyama Guild
+  </footer>
 </body>
+
 </html>
