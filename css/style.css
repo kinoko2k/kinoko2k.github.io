@@ -395,6 +395,7 @@ div.container {
   border-radius: 12px;
   width: calc(50% - 20px); /* 50%の幅からgapの影響を引いた値に設定 */
   height: 152px;
+  margin-left: flex;
 }
 
 div.margin {
