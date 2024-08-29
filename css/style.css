@@ -235,7 +235,7 @@ a.name {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 95vh;
   text-align: center;
   position: relative;
   background-color: transparent; /* 画像エリアを透明に設定 */
