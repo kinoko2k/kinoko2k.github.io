@@ -1,10 +1,87 @@
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 9999999;
+  text-align:center;
+  color:#fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+body{
+  background:#333;/*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear{
+  background:#fff;/*画面を開いた後の背景色を指定*/
+}
+
+.splashbg{
+  position: fixed;
+  top: 0;
+  right:0;
+  bottom:0;
+  left: 0;
+  border-width: 0px;/*開始はボーダーの太さは0*/
+  border-style:solid;
+    border-color: #666;/*拡大する四角の色*/
+  animation-duration:.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes backBoxAnime{
+  99.9% {/*アニメーション終了ぎりぎりまで*/
+        z-index: 2;/*最前面に*/
+    border-width: 0px;/*開始はボーダーの太さは0*/
+  }
+    100%{
+       z-index: -1; /*最背面に*/
+        border-width: 0px;/*終了はボーダーの太さは0*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+    position: relative;
+  opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+  animation-name:PageAnimeAppear;
+  animation-duration:1s;
+  animation-delay:0.2s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+
+}
 body {
   font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   font-size: 15px;
   letter-spacing: .05em;
   color: #333;
-  background-color: #E0FFFF;
-  background-image: linear-gradient(to bottom right, #e0ffec, #87CEEB);
+  
 }
 
 a {
@@ -81,6 +158,9 @@ img {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  top: 0;
+  left: 0;
+  z-index: 1000; /* ヘッダーを前面に表示 */
 }
 
 .header .container {
@@ -100,6 +180,15 @@ img {
 
 .header-logo a {
   color: #333;
+}
+
+a.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* セクションを画面全体の高さにする */
+  text-align: center; /* テキストを中央に配置 */
+  background-color: #f0f0f0; /* 任意の背景色 */
 }
 
 .gnav-list {
@@ -148,10 +237,30 @@ img {
   justify-content: center;
   height: 85vh;
   text-align: center;
+  position: relative;
+  background-color: transparent; /* 画像エリアを透明に設定 */
+}
+.mv {
+  z-index: 1; /* mv-titleを後ろに表示 */
+}
+
+.mv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/kinokoserver.png'); /* 画像を背景として設定 */
+  background-size: cover; /* 画像を要素全体にフィットさせる */
+  background-position: center; /* 画像を中央に配置 */
+  opacity: 0.3; /* 透過度を設定 */
+  z-index: -1; /* 背景画像をテキストの背面に配置 */
 }
 
 .mv-container {
   padding: 0 40px;
+  z-index: 1; /* テキストを前面に配置 */
 }
 
 .mv-title {
@@ -161,6 +270,7 @@ img {
   margin-bottom: 5px;
   letter-spacing: .1em;
 }
+
 .mv-subtitle {
   font-size: 20px;
   font-weight: bold;
@@ -217,6 +327,11 @@ img {
 /*--------------------------------
  Skill
 ---------------------------------*/
+section.skill {
+  background-color: #E0FFFF;
+  background-image: linear-gradient(to bottom right, #e0ffec, #87CEEB);
+}
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
@@ -271,6 +386,17 @@ img {
 .profile-body {
   flex: 1;
 }
+
+div.container {
+  gap: 10px; /* アイフレーム間のスペースを設定 */
+}
+
+.container iframe {
+  border-radius: 12px;
+  width: calc(50% - 20px); /* 50%の幅からgapの影響を引いた値に設定 */
+  height: 152px;
+}
+
 div.margin {
   margin-bottom: 10px;
   margin-top: 20px;
@@ -283,6 +409,8 @@ img.container {
 .profile-body p {
   font-size: 15px;
   line-height: 1.8;
+  text-align: left;
+  margin-left: 100px
 }
 
 .profile-body p:not(:last-child) {
@@ -559,11 +687,17 @@ a {
   .profile {
     display: block;
   }
-  .profile-img {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 25px;
+
+  .profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* セクション全体の高さを設定（任意） */
   }
+  
+
+  
+  
 
   .profile-body p {
     font-size: 14px;
