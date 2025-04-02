@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('images/background_image.png') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+}
+
+.zen-kaku-gothic-new-regular {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.profile-card {
+    max-width: 450px;
+    width: 90%;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    opacity: 0.95;
+}
+
+.profile-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.buttons a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin: 10px auto;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 85%;
+    text-align: left;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.twitter { background: #86c8e9; }
+.discord { background: #9badee; }
+.note { background: #F5F5F5; }
+.github { background: #c4c4c4; }
+.statsfm { background: #06c755; }
+.bookmeter { background: #77c799; }
+.bentome { background: #F5F5F5; }
+.minecraft { background: rgb(121, 210, 220); }
+
+.twitter:hover { background: #9dd2f0; }
+.discord:hover { background: #aab9f1; }
+.note:hover { background: #eaeaea; }
+.github:hover { background: #dad5d5df; }
+.statsfm:hover { background: #07da5f; }
+.bookmeter:hover { background: #8ad1aa; }
+.bentome:hover { background: #e0e0e0; }
+.minecraft:hover { background: rgb(152, 236, 245); }
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.right {
+    margin: 0 0 0 auto;
+}
+
+.intro {
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    color: rgb(101, 91, 91);
+    font-size: 14px;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        max-width: 80%;
+        padding: 18px;
+        margin-top: 20px;
+        opacity: 0.9;
+    }
+
+    .profile-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .buttons a {
+        width: 90%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        max-width: 75%;
+        padding: 15px;
+        opacity: 0.85;
+    }
+
+    .profile-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .buttons a {
+        width: 95%;
+        padding: 8px;
+    }
+}
