@@ -89,6 +89,23 @@
                 マイクラサーバー『<a href="https://mineportal.jp/servers/cm5j7f1hi0000iuiqxfe3t47j">きのこサーバー2</a>』を運営しています。<br>
             </p>
         </div>
+        <div class="scroll-container">
+            <button class="scroll-button left">◀</button>
+            <div class="image-scroll">
+                <img src="images/scroll/2022-10-06_20.46.04.png" alt="画像">
+                <img src="images/scroll/2022-10-22_22.57.33.png" alt="画像">
+                <img src="images/scroll/2022-10-22_23.png" alt="画像">
+                <img src="images/scroll/2022-11-30_23.25.49.png" alt="画像">
+                <img src="images/scroll/2022-12-01_17.48.28.png" alt="画像">
+                <img src="images/scroll/2022-12-04_19.23.41-1.png" alt="画像">
+                <img src="images/scroll/2022-12-04_19.26.51-2.png" alt="画像">
+                <img src="images/scroll/2022-12-04_19.31.49-1.png" alt="画像">
+                <img src="images/scroll/2023-08-15_13.29.23.png" alt="画像">
+                <img src="images/scroll/2023-12-16_19.42.56.png" alt="画像">
+                <img src="images/scroll/2024-01-01_00.08.39.png" alt="画像">
+            </div>
+            <button class="scroll-button right">▶</button>
+        </div>
     </div>
 
     <footer>
@@ -96,5 +113,16 @@
     </footer>
 
 </body>
+<script>
+    document.querySelector('.left').addEventListener('click', function () {
+        const scrollContainer = document.querySelector('.image-scroll');
+        scrollContainer.scrollLeft -= 200;
+    });
+
+    document.querySelector('.right').addEventListener('click', function () {
+        const scrollContainer = document.querySelector('.image-scroll');
+        scrollContainer.scrollLeft += 200;
+    });
+</script>
 
 </html>

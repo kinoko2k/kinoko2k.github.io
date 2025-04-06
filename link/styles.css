@@ -94,6 +94,69 @@ body::before {
     line-height: 1.4;
 }
 
+/* scroll images */
+.scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.image-scroll img {
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.image-scroll img:hover {
+    transform: scale(1.05);
+}
+
+.scroll-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* scroll images*/
 footer {
     width: 100%;
     text-align: center;
